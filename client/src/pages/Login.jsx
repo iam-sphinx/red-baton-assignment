@@ -9,10 +9,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const data = await axios.post("http://localhost:8080/api/v1/user/login", {
-        username,
-        password,
-      });
+      const data = await axios.post(
+        "https://red-baton-backend.onrender.com/user/login",
+        {
+          username,
+          password,
+        }
+      );
       if (data) {
         localStorage.setItem("data", data.data);
         console.log(localStorage.getItem("data"));
@@ -25,7 +28,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const data = await axios.post(
-        "http://localhost:8080/api/v1/user/register",
+        "https://red-baton-backend.onrender.com/user/register",
         {
           username,
           password,

@@ -10,7 +10,7 @@ const Login = () => {
 
     try {
       const data = await axios.post(
-        "https://red-baton-backend.onrender.com/user/login",
+        "https://backend-yh0x.onrender.com/api/v1/user/login",
         {
           username,
           password,
@@ -28,7 +28,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const data = await axios.post(
-        "https://red-baton-backend.onrender.com/user/register",
+        "https://backend-yh0x.onrender.com/api/v1/user/register",
         {
           username,
           password,

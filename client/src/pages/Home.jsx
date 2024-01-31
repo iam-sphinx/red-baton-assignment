@@ -22,7 +22,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("https://red-baton-backend.onrender.com/news");
+      const response = await axios.get("https://backend-yh0x.onrender.com/api/v1/news");
       console.log(response.data.data);
       setResponseData(response.data.data);
     } catch (error) {

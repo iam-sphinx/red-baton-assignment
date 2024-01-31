@@ -21,6 +21,9 @@ import { News } from "./models/news.models.js";
 import newsRouter from "./routes/news.routes.js";
 
 // routes declaration
+app.get("/", (req, res) => {
+  res.send("Hello from backend");
+});
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/news", newsRouter);
 

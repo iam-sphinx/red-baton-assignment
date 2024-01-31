@@ -1,9 +1,8 @@
 import { News } from "../models/news.models.js";
 import { ApiError } from "../utils/apiError.js";
 import { ApiResponse } from "../utils/apiResponse.js";
-import { asyncHandler } from "../utils/asyncHandler.js";
 
-export const fetchNews = asyncHandler(async (req, res) => {
+export const fetchNews = async (req, res) => {
     try {
       const data = await News.find().sort({ posted_on: -1 });
   
@@ -11,5 +10,5 @@ export const fetchNews = asyncHandler(async (req, res) => {
     } catch (error) {
       throw new ApiError(404, "Not Found");
     }
-  });
+  };
   
